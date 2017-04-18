@@ -4,6 +4,6 @@ node {
   }
 
   stage('Test') {
-    echo 'Brunch name is ${env.BRANCH_NAME}'
+    echo "Brunch name is ${env.BRANCH_NAME}"
   }
 }
