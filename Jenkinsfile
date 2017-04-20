@@ -3,9 +3,13 @@ pipeline {
   parameters {
     string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
   }
-  stage('Input parameters') {
-    echo "${params.Greeting} World!"
-  }
+  stages {
+        stage('Example') {
+            steps {
+                echo "${params.Greeting} World!"
+            }
+        }
+    }
 }
 
 node {
